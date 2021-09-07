@@ -9,7 +9,18 @@ function App() {
       
       </div>
       <div className="Box2">
-      
+        <div>
+          <span>Inscripton</span>
+          <span>Connexion</span>
+        </div>
+
+          <form>
+            <span>Inscription</span>
+          </form>
+
+          <form>
+            <span>Connexion</span>
+          </form>
       </div>
     </div>
   );
