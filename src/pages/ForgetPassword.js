@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-const Login = () => {
+const ForgetPassword = () => {
     return (
-
         <div className="Auth">
         <div className="mainLogin mainChild">
             <form>
@@ -21,24 +19,16 @@ const Login = () => {
 
                 <div className="form-group">
                     <span>User</span>
-                    <input placeholder="Adresse email ou nom d'utilisateur"/>
+                    <input placeholder="Veuillez entrer votre adresse e-mail"/>
                 </div>
 
-                <div className="form-group">
-                    <span>Key</span>
-                    <input placeholder="Adresse email ou nom d'utilisateur"/>
-                </div>
-
-                <div className="form-group form-group-forget">
-                    <Link to="mot_de_passe_oublie" className="linkForget">Mot de passe oublié !</Link>      
-                </div>
                 
                 <div className="form-group">
-                    <button className="btnSubmit">se connecter</button>      
+                    <button className="btnSubmit">Envoyer</button>      
                 </div>
 
                 <div className="form-group">
-                    <p>Vous n'avez pas de compte !<Link to="inscription" className="btnCurrentForm">s'inscrire</Link></p>      
+                    <p>Vous avez deja un compte !<Link to="connexion" className="btnCurrentForm">se connecter</Link></p>      
                 </div>
 
             </form>
@@ -47,4 +37,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default ForgetPassword

@@ -6,7 +6,7 @@
     background-size: contain;
 }
 
-.DivLogReg{
+.DivLogRegs{
     /* background-color: yellow; */
     position: absolute;
     right: 0;
@@ -23,6 +23,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    padding: 20px;
 }
 
 .mainChild form{
@@ -35,8 +44,21 @@
 
 .form-group-head{
     /* background-color: pink; */
-    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: -8vh;
 }
+.titleApp{
+    background-color: #f05;
+    color: #fff;
+    width: 140px;
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 160px;
+    font-family: sans-serif;
+}
+
 .form-group-head img{
     width: 100% important;
 }
@@ -65,7 +87,13 @@
     box-shadow: 0 4px 6px 0 #333333;
     letter-spacing: 1px;
     font-family: sans-serif;
+    outline: 0;
 }
+
+.form-group input:focus{
+    background-color: #ff9102;
+}
+
 
 .form-group-forget{
     text-align: end;
@@ -75,6 +103,7 @@
     color: #333333;
     font-weight: bold;
     letter-spacing: 1px;
+    outline: 0;
 }
 
 .btnSubmit{
@@ -86,6 +115,7 @@
     border: 1px solid transparent;
     box-shadow: 0 4px 5px 0 #333333;
     cursor: pointer;
+    outline: 0;
 }
 
 .btnCurrentForm{
@@ -95,6 +125,8 @@
     padding: 0 10px;
     cursor: pointer;
     color: #f05;
+    outline: 0;
+    text-decoration: none;
 }
 
 .form-group-error{
@@ -107,4 +139,6 @@
     letter-spacing: 1px;
     border-radius: 20px;
     border: 1px solid transparent;
+    display: none;
 }
+
