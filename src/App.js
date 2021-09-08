@@ -1,28 +1,20 @@
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Welcome from "./pages/Welcome";
+import Auth from './pages/Auth';
 import './assets/css/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div className="Box1">
-
-
-      
-      </div>
-      <div className="Box2">
-        <div>
-          <span>Inscripton</span>
-          <span>Connexion</span>
-        </div>
-
-          <form>
-            <span>Inscription</span>
-          </form>
-
-          <form>
-            <span>Connexion</span>
-          </form>
-      </div>
-    </div>
+    <Router>
+       <Switch>
+        <Route exact path="/"><Auth /></Route>
+        <Route path="/welcome"><Welcome /></Route>
+        <Route path="/connexion"><Login /></Route>
+        <Route path="/inscription"><Register /></Route>
+      </Switch>
+  </Router>
   );
 }
 
