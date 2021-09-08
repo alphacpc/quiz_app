@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ForgetPassword = () => {
@@ -18,8 +19,8 @@ const ForgetPassword = () => {
 
 
                 <div className="form-group">
-                    <span>User</span>
-                    <input placeholder="Veuillez entrer votre adresse e-mail"/>
+                    <span><FaEnvelope /></span>
+                    <input placeholder="Veuillez entrer votre adresse e-mail" autoComplete="off" required/>
                 </div>
 
                 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { FaEnvelope, FaLock } from 'react-icons/fa';
 
 const Login = () => {
     return (
@@ -20,13 +20,13 @@ const Login = () => {
 
 
                 <div className="form-group">
-                    <span>User</span>
-                    <input placeholder="Adresse email ou nom d'utilisateur"/>
+                    <span><FaEnvelope/></span>
+                    <input placeholder="Adresse email ou nom d'utilisateur" autoComplete="off" required/>
                 </div>
 
                 <div className="form-group">
-                    <span>Key</span>
-                    <input placeholder="Adresse email ou nom d'utilisateur"/>
+                    <span><FaLock /></span>
+                    <input placeholder="Adresse email ou nom d'utilisateur" autoComplete="off" required/>
                 </div>
 
                 <div className="form-group form-group-forget">

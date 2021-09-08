@@ -19,19 +19,19 @@ const Register = () => {
                 </div>
 
                 <div className="form-group">
-                    <input placeholder="Entrer votre Prénom et Nom de famille"/>
+                    <input placeholder="Entrer votre Prénom et Nom de famille" autocomplete="off" required/>
                 </div>
 
                 <div className="form-group">
-                    <input placeholder="Entrer votre adresse e-mail"/>
+                    <input placeholder="Entrer votre adresse e-mail" autocomplete="off" required/>
                 </div>
 
                 <div className="form-group">
-                    <input placeholder="Entrer votre mot de passe"/>
+                    <input placeholder="Entrer votre mot de passe" autocomplete="off" required/>
                 </div>
 
                 <div className="form-group">
-                    <input placeholder="Veuillez confirmer votre mot de passe"/>
+                    <input placeholder="Veuillez confirmer votre mot de passe" autocomplete="off" required/>
                 </div>
 
 
