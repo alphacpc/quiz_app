@@ -35,7 +35,7 @@
 }
 
 .mainChild form{
-    background-color: yellowgreen;
+    background-color: #1E3163;
     width: 100%;
     padding: 0 40px;
     border: 1px solid #cccccc;
@@ -96,21 +96,30 @@
     background-color: #ff9102;
 }
 
+.form-group p{
+    color: #ffffff;
+    font-family: sans-serif;
+    letter-spacing: .4px;
+}
+
 
 .form-group-forget{
     text-align: end;
 }
 .linkForget{
     text-decoration: none;
-    color: #333333;
+    color: #ffffff;
     font-weight: bold;
     letter-spacing: 1px;
     outline: 0;
+    font-family: sans-serif;
 }
 
 .btnSubmit{
     background-color: yellow;
     font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
     padding: 14px 30px;
     letter-spacing: 1px;
     border-radius: 30px;
