@@ -150,6 +150,11 @@
     letter-spacing: 1px;
     border-radius: 20px;
     border: 1px solid transparent;
+    transition: all ease .3s;
     display: none;
 }
 
+
+.form-group-error.show{
+    display: block;
+}
