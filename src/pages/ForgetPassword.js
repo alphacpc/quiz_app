@@ -1,6 +1,6 @@
 import React, {useContext, useState, } from 'react';
 import { FaEnvelope } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import FirebaseContext from './../firebases/contextFirebase';
 
@@ -11,6 +11,7 @@ const ForgetPassword = () => {
     const [email, setEmail] = useState("");
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+    const history = useHistory();
 
     const handleChange = (e) => setEmail(e.target.value);
 
@@ -36,6 +37,12 @@ const ForgetPassword = () => {
             setError(null);
             setEmail("");
             setSuccess(`Consultez votre boite mail, un e-mail a été envoyé à l'adresse ${email} !`)
+
+            setTimeout(()=>{
+                setSuccess(null);
+                history.push("/connexion");
+                
+            },3000)
         }
 
         catch(err){
