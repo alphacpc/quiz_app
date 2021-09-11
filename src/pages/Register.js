@@ -40,7 +40,6 @@ const Register = () => {
             const user = await firebase.registerUser(email, mdp);
             if(user){
                 setLoginData({...initData});
-                //return <Redirect to="/bienvenue" />
                 history.push('/bienvenue');
             }
         }

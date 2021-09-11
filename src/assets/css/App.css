@@ -42,6 +42,11 @@
     border-radius: 10px;
 }
 
+
+/* ***************************** */
+/* *******PARTIE FORMULAIRE****** */
+/* ***************************** */
+
 .form-group-head{
     /* background-color: pink; */
     justify-content: center;
@@ -154,7 +159,92 @@
     display: none;
 }
 
+.form-group-success{
+    background-color: rgb(37, 184, 0);
+    color: #ffffff;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 8px;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    border: 1px solid transparent;
+    transition: all ease .3s;
+    display: block;
+}
+
 
 .form-group-error.show{
     display: block;
+}
+
+
+
+/* ******************************* */
+/* *******PARTIE WELCOME******** */
+/* *************************** */
+.mainWelcome{
+    background-color: #1E3163;
+    height: 100vh;
+}
+
+.welcomeHead{
+    background-color: #ffffff;
+    padding: 15px 20px;
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.welcomeBody{
+    padding: 0 10%;
+}
+
+
+
+
+
+/* ******************************* */
+/* *******PARTIE APPBAR******** */
+/* *************************** */
+
+.mainAppBar{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.currentUser{
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#btnLogout{
+    border: 0;
+    padding:10px 15px;
+    background-color: orangered;
+    font-family: sans-serif;
+    letter-spacing: .8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+#btnLogout:hover{
+    background-color: #f05;
+    transform: scale(.9,.9);
+}
+
+
+/* ******************************* */
+/* *******PARTIE QUIZ******** */
+/* *************************** */
+.mainQuiz{
+    background-color: #ffffff;
+    height: calc(100vh - 84vh);
+    padding: 20px;
+    border-radius: 4px;
 }
