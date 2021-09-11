@@ -35,10 +35,13 @@ const Register = () => {
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-
+        
         try{
-            const user = await firebase.registerUser(email, mdp);
-            if(user){
+            
+            const new_user = await firebase.registerUser(email, mdp);
+            
+            if(new_user){ 
+                await firebase.userConnect(new_user.user.uid).set({fullname,email})
                 setLoginData({...initData});
                 history.push('/bienvenue');
             }

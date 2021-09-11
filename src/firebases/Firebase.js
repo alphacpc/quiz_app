@@ -1,11 +1,13 @@
 import firebase from "firebase/compat/app";
 import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 import config from './config';
 
 class Firebase{
     constructor(){
         firebase.initializeApp(config);
         this.auth = firebase.auth();
+        this.db = firebase.firestore();
     }
 
 
@@ -20,7 +22,12 @@ class Firebase{
     logoutUser = () => this.auth.signOut();
 
     //LA METHODE POUR RESET PASSWORD
-    resetPassword = (email) => this.auth.sendPasswordResetEmail(email)
+    resetPassword = (email) => this.auth.sendPasswordResetEmail(email);
+
+    //CURRENT USER
+    userConnect = (uid) => this.db.doc(`users/${uid}`);
+
+
 }
 
 export default Firebase;

@@ -1,18 +1,23 @@
 import React, { useContext } from 'react';
 import FirebaseContext from './../firebases/contextFirebase';
 
-const AppBar = () => {
+const AppBar = ({userData}) => {
 
     const firebase = useContext(FirebaseContext);
 
-    const handleClick = () => {
-        firebase.logoutUser()
-        console.log('click disconnect')
+    const handleClick = async () => {
+
+        try{
+            return await firebase.logoutUser();
+        }
+        catch(err){
+            console.log(err);
+        }
     }
 
     return (
         <div className="mainAppBar">
-            <span className="currentUser">Alphacpc</span>
+            <span className="currentUser">{userData.fullname}</span>
             <button onClick={ handleClick} id="btnLogout">Deconnexion</button>
         </div>
     )

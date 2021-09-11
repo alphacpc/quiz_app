@@ -2,11 +2,12 @@ import React from 'react';
 import AppBar from './../components/AppBar';
 import Quiz from './../components/Quiz';
 
-const Welcome = () => {
+const Welcome = ({userData}) => {
+    
     return (
         <div className="mainWelcome">
             <div className="welcomeHead">
-                <AppBar />
+                <AppBar userData={userData}  />
             </div>
             <div className="welcomeBody">
                 <Quiz />
