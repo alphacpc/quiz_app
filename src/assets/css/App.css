@@ -243,8 +243,97 @@
 /* *******PARTIE QUIZ******** */
 /* *************************** */
 .mainQuiz{
-    background-color: #ffffff;
+    background-color: transparent;
     height: calc(100vh - 84vh);
     padding: 20px;
     border-radius: 4px;
 }
+
+
+
+
+
+
+
+
+
+
+/* ******************************* */
+/* *******PARTIE STEP QUIZ******** */
+/* *************************** */
+.stepProgressBar{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.stepProgressBar ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    counter-reset: step;
+
+}
+
+.stepProgressBar li{
+    display: inline-block;
+    position: relative;
+    width: 9%;
+    color: #ffffff;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.stepProgressBar li:before{
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #1E3163;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    content:"";
+    /* counter-increment: step; */
+    z-index: 2;
+    position: relative;
+    margin-bottom: 4px;
+    margin-left: 20%;
+}
+
+.stepProgressBar li:after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 15px;
+    left: -65%;
+    z-index: 1;
+}
+
+.stepProgressBar li:first-child:after{
+    content:none;
+}
+
+.stepProgressBar li.active + li::after{
+    background-color: #f05;
+}
+
+.stepProgressBar li.active:before{
+    background-color: #f05 ;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+

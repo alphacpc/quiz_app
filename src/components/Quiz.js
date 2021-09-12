@@ -1,10 +1,16 @@
 import React from 'react'
+import ProgressBar from './ProgressBar';
+
 
 const Quiz = () => {
     return (
-        <div className="mainQuiz">
-            <h1>Quiz component </h1>
-        </div>
+        <React.Fragment>
+            <ProgressBar />            
+            
+            <div className="mainQuiz">
+            </div>
+        </React.Fragment>
+        
     )
 }
 

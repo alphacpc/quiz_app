@@ -163,7 +163,7 @@ export const Quiz = [
 
 
 
-                //Quiz Premier
+                //Quiz Premier body.idOk section.row.fw-row 1WLR76W9Cn6hiPGMB34DX
 
                 {
                     id: 16,
@@ -173,15 +173,14 @@ export const Quiz = [
                 },
                 {
                     id: 16,
-                    question:"",
-                    options:["1er","2e","3e","4e"],
-                    answer:"2e"
-                },
-                {
-                    id: 16,
-                    question:"",
-                    options:["1er","2e","3e","4e"],
-                    answer:"2e"
+                    question:"Qu’est-ce que la CEDEAO ?",
+                    options:[
+                        "La Commission de l’économie et du développement écologique d’Afrique occidentale",
+                        "La Communauté économique des États de l'Afrique de l'Ouest",
+                        "La Commission aux énergies durables et à l’environnement de l’Assemblée ordinaire du Parlement français",
+                        "La Charte pour une Education démocratique et équitable dans les Affiliés officiels signée parles établissements scolaires privés"
+                    ],
+                    answer:""
                 },
             ]
         }
