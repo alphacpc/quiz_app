@@ -12,6 +12,8 @@ const Quiz = () => {
     const [sortedQuestion, setSortedQuestion] = useState([]);
     const [question,setQuestion] = useState(null);
     const [options, setOptions] = useState([]);
+    const [btnDisabled,setBtnDisabled] = useState(false)
+    const [userAnswer, setUserAnswer ] = useState(null);
 
     const LoadQuestions = (level) =>{
         const fetchArrayQuiz = quizData[0].quiz[`${level}`]
@@ -27,14 +29,17 @@ const Quiz = () => {
     }
 
 
+    const submitAnswer = (answer) => {
+        setBtnDisabled(false);
+        setUserAnswer(userAnswer);
+    }
 
-    // if(sortedQuestion.length > 0){
-    //     setQuestion(sortedQuestion[indexQuestion].question);
-    //     setOptions(sortedQuestion[indexQuestion].options);
-    // }
-
-
-    const displayOptions = options.map( (option, index) => <p key={index} className="Answer">{option}</p> )
+    const displayOptions = options.map( (option, index) => {
+        return <p   key={index} 
+                    className={`Answer ${userAnswer != null ? 'selected': ''}`}
+                    onClick={()=> submitAnswer(option)}
+                    >{option}</p>
+    } )
 
 
 
@@ -63,7 +68,7 @@ const Quiz = () => {
                         {displayOptions}
                     </div>
 
-                    <button className="btnValidAnswer" type="submit">Valider</button>
+                    <button className="btnValidAnswer" disabled={btnDisabled} type="submit">Valider</button>
                 </div>
         
             </div>
