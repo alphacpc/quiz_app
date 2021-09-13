@@ -186,7 +186,8 @@
 /* *************************** */
 .mainWelcome{
     background-color: #1E3163;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 15vh;
 }
 
 .welcomeHead{

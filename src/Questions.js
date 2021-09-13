@@ -1,8 +1,8 @@
-export const Quiz = [
+const Quiz = [
     {   
         sujet: "Un projet d'application quiz (des questions relatives à l'afrique)",
         quiz:{
-            debutant:[
+            Debutant:[
                
                 {
                     id: 1,
@@ -186,3 +186,7 @@ export const Quiz = [
         }
     }
 ]
+
+
+
+export default Quiz;
