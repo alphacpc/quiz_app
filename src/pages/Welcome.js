@@ -10,7 +10,7 @@ const Welcome = ({userData}) => {
                 <AppBar userData={userData}  />
             </div>
             <div className="welcomeBody">
-                <Quiz />
+                <Quiz userData={userData}/>
             </div>
         </div>
     )
