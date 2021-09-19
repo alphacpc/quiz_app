@@ -90,7 +90,7 @@ const Quiz = ({userData}) => {
     if (userAnswer === goodAnswer) {
         toast.success('Bravo +1!', {
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -100,9 +100,9 @@ const Quiz = ({userData}) => {
         setScore(score + 1);
     } 
     else {
-      toast.error('Erreur !', {
+      toast.error('Désolé !', {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
