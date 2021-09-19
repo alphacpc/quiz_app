@@ -8,7 +8,7 @@ const Quiz = [
                     id: 1,
                     question:"Quelle est la religion dominante en Afrique ?",
                     options:["L'Islam","La religion catholique","Les religions tribales"],
-                    answer:""
+                    answer:"L'Islam"
                 },
                 {
                     id: 2,
