@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import ProgressBar from "./ProgressBar";
+import QuizOver from './QuizOver'
 import { FaUserGraduate } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import quizData from "./../Questions";
@@ -19,6 +20,8 @@ const Quiz = ({userData}) => {
   const [userAnswer, setUserAnswer] = useState(null);
   const [score, setScore] = useState(0);
   const [sortedDataRef, setSortedDataRef] = useState([]);
+
+  const [QuizEnd, setQuizEnd] = useState(false);
 
   const [noticeWelcome, setNoticeWelcome] = useState(false);
 
@@ -77,9 +80,14 @@ const Quiz = ({userData}) => {
 
   }, [idQuestion]);
 
+  const gameOver = () => {
+    setQuizEnd(true);
+    console.log("Game over")
+  }
+
   const nextQuestion = () => {
     if (idQuestion === maxQuestions - 1) {
-      //End
+      gameOver();
     } 
     else {
       setIdQuestion(idQuestion + 1);
@@ -113,7 +121,8 @@ const Quiz = ({userData}) => {
     }
   };
 
-  return (
+  return (QuizEnd) ? (<QuizOver/>) :
+    (
     <React.Fragment>
       <ProgressBar />
       <ToastContainer />
