@@ -121,6 +121,8 @@ const Quiz = ({userData}) => {
     }
   };
 
+  const textBtn = idQuestion < maxQuestions - 1 ? "Suivant" : "Terminer";
+
   return (QuizEnd) ? (<QuizOver/>) :
     (
     <React.Fragment>
@@ -145,7 +147,7 @@ const Quiz = ({userData}) => {
             type="submit"
             onClick={nextQuestion}
           >
-            Valider
+            { textBtn }
           </button>
         </div>
       </div>
