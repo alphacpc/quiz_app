@@ -123,7 +123,10 @@ const Quiz = ({userData}) => {
 
   const textBtn = idQuestion < maxQuestions - 1 ? "Suivant" : "Terminer";
 
-  return (QuizEnd) ? (<QuizOver/>) :
+  return (QuizEnd) ? (<QuizOver 
+                        ref={ sortedDataRef }
+                      
+                      />) :
     (
     <React.Fragment>
       <ProgressBar />
