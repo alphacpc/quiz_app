@@ -12,8 +12,10 @@ const QuizOver = React.forwardRef((props, ref) => {
             </div>
 
             <div className="divGradeScore">
-                <span>Reussite : 10 %</span>
-                <span>Score : 10/10</span>
+                <p>
+                    <span className="scoreLabel">Score : </span>
+                    <span className="scoreValue">10/10</span>
+                </p>
             </div>
             <hr id="myDivider"/>
             <div className="divAllQuestions">

@@ -1,3 +1,31 @@
+/* **************** */
+@font-face {
+    font-family: 'Lora';
+    src: url('./../fonts/Lora/static/Lora-Regular.ttf');
+}
+@font-face {
+    font-family: 'Oxygen';
+    src: url('./../fonts/Oxygen/Oxygen-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf');
+}
+
+
+/* **************** */
+
+
+
+
+
+
+
+
+
+
+
 .Auth{
     display: flex;
     height: 100vh;
@@ -423,7 +451,6 @@
 /* *******PARTIE QUIZ OVER******** */
 /* *************************** */
 .divOverStep{
-    background-color: aqua;
     height: 67vh;
 }
 
@@ -433,15 +460,52 @@
     justify-content: space-between;
 }
 
+.divMsgNextLevel{
+    color: #fff;
+    font-family: "Oxygen";
+    margin-bottom: 20px;
+    margin-top: -20px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+.divMsgNextLevel p{
+    color: #77D970;
+}
+.divMsgNextLevel button{
+    background-color: #F0A500;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-family: "Oxygen";
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.divMsgNextLevel button:hover{
+    background-color: #ffd900;
+}
+
 .divGradeScore{
     background-color: #ffffff;
-    padding: 20px 0;
+    padding: 20px;
+    font-family: "Oxygen";
+    font-size: 18px;
+    justify-content: end;
 }
+
+.divGradeScore .scoreLabel,
+.divGradeScore .scoreValue{
+    color: #f05;
+    font-weight: bold;
+}
+
 #myDivider{
-    height: 4px;
+    height: 10px;
     background-color: #1E3163;
     border: none;
 }
 .divAllQuestions{
     background-color: #ffffff;
+    height: 100%;
+    padding: 20px;
 }
