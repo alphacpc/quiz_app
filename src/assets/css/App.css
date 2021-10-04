@@ -1,9 +1,5 @@
 /* **************** */
 @font-face {
-    font-family: 'Lora';
-    src: url('./../fonts/Lora/static/Lora-Regular.ttf');
-}
-@font-face {
     font-family: 'Oxygen';
     src: url('./../fonts/Oxygen/Oxygen-Regular.ttf');
 }
@@ -241,7 +237,18 @@
 
 .mainAppBar{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    /* flex-direction: column;0 */
+    width: 100%;
+    align-items: center;
+}
+.mainAppBar img{
+    width: 95px;
+    cursor: pointer;
+}
+.mainAppBar > div{
+    display: flex;
+    /* justify-content: space-between; */
     flex-direction: column;
 }
 
