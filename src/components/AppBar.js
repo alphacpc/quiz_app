@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import FirebaseContext from './../firebases/contextFirebase';
 
-import Logo3 from "./../assets/images/Logo3.png";
 import Logo5 from "./../assets/images/Logo5.png";
 
 const AppBar = ({userData}) => {
