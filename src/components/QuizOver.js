@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react';
 
 const QuizOver = React.forwardRef((props, ref) => {
 
-    // console.log(props)
+    console.log(props.level)
     console.log(ref)
     const [questionList, setQuestionList] = useState([]);
 
@@ -12,7 +12,7 @@ const QuizOver = React.forwardRef((props, ref) => {
 
     const questionAsked = questionList.map((element) => {
         return <tr key={element.id}>
-            <td>{element.question}</td>
+            <td><span className="indexQuestion">{questionList.indexOf(element) + 1} </span>{element.question}</td>
             <td>{element.answer}</td>
             <td><button className="btnInfoRelatedQuestion">Cliquez-ici</button></td>
         </tr>
@@ -26,6 +26,7 @@ const QuizOver = React.forwardRef((props, ref) => {
             </div>
 
             <div className="divGradeScore">
+                <p>Niveau: {props.level}</p>
                 <p>
                     <span className="scoreLabel">Score : </span>
                     <span className="scoreValue">10/10</span>

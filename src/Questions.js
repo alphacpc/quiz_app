@@ -73,9 +73,10 @@ const Quiz = [
                     question:"Quel est ce pays africain, avec une population plus de 200 millions d'habitants, principalement producteur de pétrole ?",
                     options:["Le Niger","Le Nigéria","L'Angola","La RDC"],
                     answer:"Le Nigéria"
-                },
+                }
 
-
+            ],
+            intermediaire:[
                 {
                     id: 11,
                     question:"Combien de pays africains ont des drapeaux vert-jaune-rouge (avec 0-1-2 étoile(s)) ?",

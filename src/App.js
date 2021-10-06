@@ -38,7 +38,7 @@ function App() {
     <Router>
        <Switch>
         <Route exact path="/"><Login /></Route>
-        <Route path="/bienvenue">{ (userSession !== null) ? <Welcome userData={userData}/> : <Redirect to="/connexion" /> }</Route>
+        <Route path="/bienvenue">{ (userSession == null) ? <Welcome userData={userData}/> : <Redirect to="/connexion" /> }</Route>
         <Route path="/mot_de_passe_oublie"><ForgetPassword /></Route>
         <Route path="/connexion"><Login /></Route>
         <Route path="/inscription"><Register /></Route>

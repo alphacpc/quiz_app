@@ -243,7 +243,7 @@
     align-items: center;
 }
 .mainAppBar img{
-    width: 95px;
+    width: 60px;
     cursor: pointer;
 }
 .mainAppBar > div{
@@ -261,16 +261,16 @@
 #btnLogout{
     border: 0;
     padding:10px 15px;
-    background-color: orangered;
+    background-color: #f05;
     font-family: sans-serif;
     letter-spacing: .8px;
     border-radius: 4px;
     cursor: pointer;
     transition: all ease .3s;
+    color: #ffffff;
 }
 
 #btnLogout:hover{
-    background-color: #f05;
     transform: scale(.9,.9);
 }
 
@@ -497,9 +497,14 @@
     padding: 20px;
     font-family: "Oxygen";
     font-size: 18px;
-    justify-content: end;
-}
+    justify-content: space-between;
+    /* display: flex; */
 
+}
+.divGradeScore > p{
+    font-weight: bold;
+    /* color: #1E3163; */
+}
 .divGradeScore .scoreLabel,
 .divGradeScore .scoreValue{
     color: #f05;
@@ -518,12 +523,13 @@
 }
 .tableAnswers{
     width: 100%;
+    padding-bottom: 60px;
 }
 
 .tableAnswers thead th{
     text-align: start;
     padding: 20px;
-    font-family: Oxygen;
+    font-family: "Roboto";
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 1px;
@@ -533,10 +539,24 @@
 
 .tableAnswers tbody td{
     padding: 10px 20px;
-    border-bottom: 1px solid #1E3163;
-    font-family: Oxygen;
+    border-bottom: 1px solid #e2dede;
+    font-family: "Roboto";
+    font-size: 20px     ;
+    letter-spacing: 1px;
+    line-height: 30px;
+    border-right: 0;
+    border-left: 0;
 }
 
+.tableAnswers tbody td .indexQuestion{
+    background-color: #1E3163;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
 
 .tableAnswers tbody tr td:last-child{
     display: flex;
@@ -544,8 +564,8 @@
 }
 
 .tableAnswers .btnInfoRelatedQuestion{
-    padding:  5px 10px;
-    font-family: Oxygen;
+    padding:  10px 20px;
+    font-family: "Roboto";
     font-size: 15px;
     border-radius: 20px;
     background-color: #F0A500;

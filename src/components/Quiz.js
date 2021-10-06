@@ -10,13 +10,13 @@ import 'react-toastify/dist/ReactToastify.css';
  
 const Quiz = ({userData}) => {
   const levelNames = ["Debutant", "Intermediaire", "Expert"];
-  const quizLevel = 0;
+  const [quizLevel, setQuizLevel ] = useState(0)
   const maxQuestions = 10;
   const [idQuestion, setIdQuestion] = useState(0);
   const [sortedQuestion, setSortedQuestion] = useState([]);
   const [question, setQuestion] = useState(null);
   const [options, setOptions] = useState([]);
-  const [btnDisabled, setBtnDisabled] = useState(false);
+  const [btnDisabled, setBtnDisabled] = useState(true);
   const [userAnswer, setUserAnswer] = useState(null);
   const [score, setScore] = useState(0);
   const [sortedDataRef, setSortedDataRef] = useState([]);
@@ -91,6 +91,7 @@ const Quiz = ({userData}) => {
     } 
     else {
       setIdQuestion(idQuestion + 1);
+      setBtnDisabled(true)
     }
 
     let goodAnswer = sortedDataRef[idQuestion].answer;
@@ -123,9 +124,21 @@ const Quiz = ({userData}) => {
 
   const textBtn = idQuestion < maxQuestions - 1 ? "Suivant" : "Terminer";
 
+  const buttonElement = ( !btnDisabled ) ?  (
+    <button 
+            type="submit"
+            className="btnValidAnswer"
+            onClick={nextQuestion}
+            >{textBtn}</button>
+  ): (
+    <button 
+            className="btnValidAnswer"
+            >{textBtn}</button>
+  )
+
   return (QuizEnd) ? (<QuizOver 
                         ref={ sortedDataRef }
-                      
+                        level={levelNames[quizLevel]}
                       />) :
     (
     <React.Fragment>
@@ -137,21 +150,15 @@ const Quiz = ({userData}) => {
             {" "}
             <FaUserGraduate /> Niveau:
           </span>
-          <span className="valueLevel">Debutant</span>
+          <span className="valueLevel">{levelNames[quizLevel]}</span>
         </div>
 
         <div className="divQuiz">
           <h2 className="Question">{question}</h2>
           <div className="divAnswers">{displayOptions}</div>
 
-          <button
-            className="btnValidAnswer"
-            disabled={btnDisabled}
-            type="submit"
-            onClick={nextQuestion}
-          >
-            { textBtn }
-          </button>
+          { buttonElement }
+
         </div>
       </div>
     </React.Fragment>
