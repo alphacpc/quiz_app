@@ -1,9 +1,11 @@
 import React, { useEffect, useState} from 'react';
+import { FaUserGraduate } from "react-icons/fa";
+
 
 const QuizOver = React.forwardRef((props, ref) => {
 
-    console.log(props.level)
-    console.log(ref)
+    const { levelName, score, numQuestions, nextLevel, quizLevel } = props;
+       
     const [questionList, setQuestionList] = useState([]);
 
     useEffect(()=>{
@@ -22,14 +24,16 @@ const QuizOver = React.forwardRef((props, ref) => {
         <div className="divOverStep">
             <div className="divMsgNextLevel">
                 <p>Bravo, vous etes un expert</p>
-                <button>Niveau suivant</button>
+                <button onClick={() => nextLevel(quizLevel) }>Niveau suivant</button>
             </div>
 
             <div className="divGradeScore">
-                <p>Niveau: {props.level}</p>
+                <p>
+                    <FaUserGraduate /> Niveau: <span className="valueLevel">{ levelName }</span>
+                </p>
                 <p>
                     <span className="scoreLabel">Score : </span>
-                    <span className="scoreValue">10/10</span>
+                    <span className="scoreValue">{score}/{ numQuestions}</span>
                 </p>
             </div>
             <hr id="myDivider"/>

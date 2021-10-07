@@ -6,21 +6,21 @@ const Quiz = [
                
                 {
                     id: 1,
-                    question:"Quelle est la religion dominante en Afrique ?",
-                    options:["L'Islam","La religion catholique","Les religions tribales"],
-                    answer:"L'Islam"
+                    question:"Quelle est la capitale du senegal ?",
+                    options:["Paris","New york","Dakar","Camberene"],
+                    answer:"Dakar"
                 },
                 {
                     id: 2,
-                    question:"Quel est le sommet le plus haut d’Afrique ?",
-                    options:["Le Mawenzi","Le Kilimandjaro","le Mont Kenya"],
-                    answer:"Le Kilimandjaro"
+                    question:"Quelle est la capitale de la france ?",
+                    options:["Tivaoune peulh","Paris","Yeumbeul","Ouagadougou"],
+                    answer:"Paris"
                 },
                 {
                     id: 3,
-                    question:"Le Cap-Vert, qui se situe à 644 kilomètres des côtes du Sénégal, a pour capitale",
-                    options:["Sal","Boa Vista","Praia","Santiago"],
-                    answer:""
+                    question:"Combien fait 10 + 30 + 40 + 60 + 10",
+                    options:["20","160","140","150"],
+                    answer:"150"
                 },
                 {
                     id: 4,
@@ -37,8 +37,8 @@ const Quiz = [
                 {
                     id: 6,
                     question:"Combien de pays d'Afrique n'ont jamais été colonisés ?",
-                    options:[0, 1, 1.5 ,2],
-                    answer:""
+                    options:["0", "1", "1.5" ,"2"],
+                    answer:"1"
                 },
                 {
                     id: 7,
@@ -49,7 +49,7 @@ const Quiz = [
                         "C'est une méthode de cuisine qui saisit les aliments dans une poêle (pan en anglais) en argile posée sur un feu puissant",
                         "C'est une doctrine prônée par Sékou Touré"
                     ],
-                    answer:"Vrai"
+                    answer:"C'est une doctrine prônée par Sékou Touré"
                 },
                 {
                     id: 8,
@@ -66,7 +66,7 @@ const Quiz = [
                     id: 9,
                     question:"Quel est l'ancien nom du Mali ?",
                     options:["Le Dahomey","La Haute-volta","L'Ile de France", "Le Soudan français"],
-                    answer:"Le Soudan français"
+                    answer:"Le Dahomey"
                 },
                 {
                     id: 10,
@@ -76,7 +76,7 @@ const Quiz = [
                 }
 
             ],
-            intermediaire:[
+            Intermediaire:[
                 {
                     id: 11,
                     question:"Combien de pays africains ont des drapeaux vert-jaune-rouge (avec 0-1-2 étoile(s)) ?",

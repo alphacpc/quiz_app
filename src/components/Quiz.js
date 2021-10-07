@@ -26,6 +26,7 @@ const Quiz = ({userData}) => {
   const [noticeWelcome, setNoticeWelcome] = useState(false);
 
   const LoadQuestions = (level) => {
+    console.log(level)
     const fetchArrayQuiz = quizData[0].quiz[`${level}`];
 
     if (fetchArrayQuiz.length >= maxQuestions) {
@@ -136,9 +137,26 @@ const Quiz = ({userData}) => {
             >{textBtn}</button>
   )
 
+  const nextLevel = (level) => {
+    setQuizLevel(level+1)
+    setIdQuestion(0);
+    setQuestion(null);
+    setUserAnswer(null);
+    setScore(0);
+    setSortedDataRef([]);
+    setQuizEnd(false);
+    setNoticeWelcome(true);
+    LoadQuestions(levelNames[quizLevel]);
+
+  }
+
   return (QuizEnd) ? (<QuizOver 
                         ref={ sortedDataRef }
-                        level={levelNames[quizLevel]}
+                        levelName={levelNames[quizLevel]}
+                        score={score}
+                        numQuestions={maxQuestions}
+                        nextLevel={nextLevel}
+                        quizLevel={ quizLevel }
                       />) :
     (
     <React.Fragment>
@@ -147,7 +165,6 @@ const Quiz = ({userData}) => {
       <div className="mainQuiz">
         <div className="divLevel">
           <span className="titleLevel">
-            {" "}
             <FaUserGraduate /> Niveau:
           </span>
           <span className="valueLevel">{levelNames[quizLevel]}</span>
