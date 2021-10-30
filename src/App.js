@@ -19,7 +19,7 @@ function App() {
   useEffect( async () => {
     firebase.auth.onAuthStateChanged((user) => (user) ? setUserSession(user) : null );
 
-    if(!!userSession){
+    if(!userSession){
       try{
         const doc = await firebase.userConnect(userSession.uid).get();
         if(doc && doc.exists){

@@ -23,10 +23,10 @@ const Login = () => {
 
     const { email, mdp} = loginData;
 
-    const checkBtn = email == '' || mdp == '' ? 
+    const checkBtn = email === '' || mdp === '' ? 
     <button className="btnSubmit" disabled>s'inscrire</button> : <button type="submit" className="btnSubmit">s'inscrire</button>   
 
-    const checkError = ( error != '' ) ?
+    const checkError = ( error !== '' ) ?
         <div className={`form-group-error ${'show'}`} >
             <p>{error.message}</p>
         </div> : 
@@ -40,7 +40,7 @@ const Login = () => {
             const user = await firebase.connectUser(email, mdp);
             if(user){
                 setLoginData({...initData});
-                history.push('/bienvenue');
+                history.push('/bienvenue');     
             }
         }
         catch(err){

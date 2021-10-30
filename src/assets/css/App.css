@@ -93,18 +93,15 @@
 }
 
 .form-group{
-    /* background-color: aquamarine; */
     margin: 0  0 15px 0;
     padding: 10px 0;
 }
 .form-group span{
-    /* background-color: darkslategrey; */
     background-color: yellow;
     padding: 14px 10px;
     margin-bottom: -10px;
     margin-right: 4px;
     float: right;
-    /* color: #ffffff; */
     font-family: sans-serif;
     letter-spacing: 1px;
 
@@ -578,4 +575,49 @@
 .tableAnswers .btnInfoRelatedQuestion:hover{
     background-color: #ffd900;
     box-shadow: 0 4px 4px 0 #1E3163;
+}
+
+
+
+
+
+
+
+/* ****************** */
+/* ****Not found**** */
+/* **************** */
+.NotFoundContainer .mainChild{
+    display: flex;
+    flex-direction: column;
+}
+
+.NotFoundContainer h2{
+    color: #1E3163;
+    font-size: 60px;
+    letter-spacing: 1.5px;
+}
+
+.NotFoundContainer p{
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.NotFoundContainer button{
+    padding: 10px 50px;
+    border-radius: 40px;
+    background-color: #1E3163;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.NotFoundContainer button:hover{
+    background-color: #1e49b6;
+    box-shadow: 0 4px 5px 0 #000;
 }

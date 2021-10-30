@@ -1,11 +1,11 @@
 import React from 'react';
-// import ImgNotFound from './../assets/images/'
+import Logo from './../assets/images/Logo5.png'
 
 const NotFound = () => {
     return (
-        <div className="Auth">
+        <div className="Auth NotFoundContainer">
             <div className="mainChild">
-                <img />
+                <img src={Logo} alt="image not found"/>
                 <h2>Oups!</h2>
                 <p>Page introuvable</p>
                 <button onClick={ () => window.history.back() }>Retour</button>

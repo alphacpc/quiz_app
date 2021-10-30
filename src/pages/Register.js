@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect} from 'react';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import FirebaseContext from './../firebases/contextFirebase';
 
 const Register = () => {
@@ -23,10 +23,10 @@ const Register = () => {
 
     const { fullname, email, mdp, mdpc} = loginData;
 
-    const checkBtn = fullname == '' || email == '' || mdp == '' || mdpc == '' ? 
+    const checkBtn = fullname === '' || email === '' || mdp === '' || mdpc === '' ? 
     <button className="btnSubmit" disabled>s'inscrire</button> : <button type="submit" className="btnSubmit">s'inscrire</button>   
 
-    const checkError = ( error != '' ) ?
+    const checkError = ( error !== '' ) ?
         <div className={`form-group-error ${'show'}`} >
             <p>{error.message}</p>
         </div> : 
