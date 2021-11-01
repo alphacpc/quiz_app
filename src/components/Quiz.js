@@ -1,13 +1,17 @@
 import React, { useState, useContext, useEffect } from "react";
 import ProgressBar from "./ProgressBar";
-import QuizOver from './QuizOver'
+import QuizOver from './QuizOver';
+import QuestionStepper from "./QuestionStepper";
+
 import { FaUserGraduate } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import quizData from "./../Questions";
 import 'react-toastify/dist/ReactToastify.minimal.css';
 
 import 'react-toastify/dist/ReactToastify.css';
- 
+
+
+
 const Quiz = ({userData}) => {
   const levelNames = ["Debutant", "Intermediaire", "Expert"];
   const [quizLevel, setQuizLevel ] = useState(0)
@@ -20,13 +24,13 @@ const Quiz = ({userData}) => {
   const [userAnswer, setUserAnswer] = useState(null);
   const [score, setScore] = useState(0);
   const [sortedDataRef, setSortedDataRef] = useState([]);
-
+  const [percent, setPercent] = useState(0);
   const [QuizEnd, setQuizEnd] = useState(false);
 
   const [noticeWelcome, setNoticeWelcome] = useState(false);
 
   const LoadQuestions = (level) => {
-    console.log(level)
+    
     const fetchArrayQuiz = quizData[0].quiz[`${level}`];
 
     if (fetchArrayQuiz.length >= maxQuestions) {
@@ -81,10 +85,27 @@ const Quiz = ({userData}) => {
 
   }, [idQuestion]);
 
+
+  const getPercent = (maxQuest, yourScore) => (yourScore / maxQuest) / 100; 
+  
   const gameOver = () => {
+    const gradePercent = getPercent(maxQuestions, score)
+
+    if( gradePercent >= 50){
+      setQuizLevel(quizLevel + 1);
+      setPercent(gradePercent);
+      setQuizEnd(true)
+    }else{
+      setPercent(gradePercent);
+      setQuizEnd(true);
+    }
+    
     setQuizEnd(true);
     console.log("Game over")
+
   }
+
+
 
   const nextQuestion = () => {
     if (idQuestion === maxQuestions - 1) {
@@ -150,17 +171,39 @@ const Quiz = ({userData}) => {
 
   }
 
+
+  const currentLevel = (level) => {
+    setQuizLevel(level)
+    setIdQuestion(0);
+    setQuestion(null);
+    setUserAnswer(null);
+    setScore(0);
+    setSortedDataRef([]);
+    setQuizEnd(false);
+    setNoticeWelcome(true);
+    LoadQuestions(levelNames[quizLevel]);
+
+  }
+
+
   return (QuizEnd) ? (<QuizOver 
                         ref={ sortedDataRef }
-                        levelName={levelNames[quizLevel]}
+                        levelName={ levelNames[quizLevel] }
+                        levelNames = { levelNames }
                         score={score}
                         numQuestions={maxQuestions}
                         nextLevel={nextLevel}
+                        currentLevel = { currentLevel }
                         quizLevel={ quizLevel }
+                        percent ={percent}
                       />) :
     (
     <React.Fragment>
-      <ProgressBar />
+      
+      {/* <ProgressBar /> */}
+
+      <QuestionStepper questions={ sortedQuestion } idQuestion={idQuestion}/>
+
       <ToastContainer />
       <div className="mainQuiz">
         <div className="divLevel">

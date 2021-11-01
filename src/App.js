@@ -19,7 +19,7 @@ function App() {
   useEffect( async () => {
     firebase.auth.onAuthStateChanged((user) => (user) ? setUserSession(user) : null );
 
-    if(!userSession){
+    if(userSession){
       try{
         const doc = await firebase.userConnect(userSession.uid).get();
         if(doc && doc.exists){
@@ -33,12 +33,14 @@ function App() {
     }
   }, [userSession])
 
+  console.log(userSession)
 
   return (
     <Router>
        <Switch>
         <Route exact path="/"><Login /></Route>
-        <Route path="/bienvenue">{ (userSession == null) ? <Welcome userData={userData}/> : <Redirect to="/connexion" /> }</Route>
+        {/* <Route path="/bienvenue">{ (userSession === null) ? <Welcome userData={userData}/> : <Redirect to="/connexion" /> }</Route> */}
+        <Route path="/bienvenue"><Welcome userData={userData}/></Route>
         <Route path="/mot_de_passe_oublie"><ForgetPassword /></Route>
         <Route path="/connexion"><Login /></Route>
         <Route path="/inscription"><Register /></Route>

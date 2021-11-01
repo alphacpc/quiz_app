@@ -7,8 +7,9 @@ const Quiz = [
                 {
                     id: 1,
                     question:"Quelle est la capitale du senegal ?",
-                    options:["Paris","New york","Dakar","Camberene"],
-                    answer:"Dakar"
+                    options:["Paris","New york","Dakar","Lome"],
+                    answer:"Dakar",
+                    infos: "Lorem ipsum"
                 },
                 {
                     id: 2,
@@ -18,7 +19,7 @@ const Quiz = [
                 },
                 {
                     id: 3,
-                    question:"Combien fait 10 + 30 + 40 + 60 + 10",
+                    question:"Quel est le therome de pythagore ?",
                     options:["20","160","140","150"],
                     answer:"150"
                 },
@@ -31,7 +32,7 @@ const Quiz = [
                 {
                     id: 5,
                     question:"Qui est Sékou Touré ?",
-                    options:["Un footballeur béninois","Le premier président de la Guinée","Un article malien","Un compagnon de route de Nelson Mandela"],
+                    options:["Un footballeur béninois","Le premier président de la Guinée Conakry","Un article malien","Un compagnon de route de Nelson Mandela"],
                     answer:"Le premier président de la Guinée"
                 },
                 {
@@ -117,31 +118,19 @@ const Quiz = [
 
 
                 {
-                    id: 16,
+                    id: 17,
                     question:"Combien y a-t-il de langues vivantes sur le continent africain ?",
                     options:["Environ 500","Environ 1000","Environ 2000","Environ 4000"],
                     answer:"Environ 2000"
                 },
                 {
-                    id: 16,
+                    id: 18,
                     question:"Dans quels pays se situent les chutes Victoria ?",
                     options:["Kenya et Tanzanie","Mozambique et Malawi","Zambie et Zimbabwe"],
                     answer:""
                 },
                 {
-                    id: 16,
-                    question:"Quelle est la monnaie du Cameroun ?",
-                    options:["L'euro","Le franc CFA","Le dollar camerounais","Le franc camerounais"],
-                    answer:""
-                },
-                {
-                    id: 16,
-                    question:"Quelle est la capitale de l’Éthiopie ?",
-                    options:["Nairobi","Addis-Adeba","Kigali","Awasa"],
-                    answer:"Addis-Adeba"
-                },
-                {
-                    id: 16,
+                    id: 19,
                     question:"Quel est le bon classement des 4 pays les plus riches en afrique (de l'année 2021) ?",
                     options:[
                         "Nigeria, Afrique du Sud, Egypte",
@@ -152,39 +141,14 @@ const Quiz = [
                     answer: "Nigeria, Afrique du Sud, Egypte"
                 },
                 {
-                    id: 16,
+                    id: 20,
                     question:"Quel est le vrai nom de l'Afrique",
                     options:["Afrique","Africa","Alkebulan","Terre afrique"],
                     answer:"Alkebulan"
                 },
 
-
-
-
-
-
-
-                //Quiz Premier body.idOk section.row.fw-row 1WLR76W9Cn6hiPGMB34DX
-
-                {
-                    id: 16,
-                    question:"Le premier africain a intégré la NASA",
-                    options:["Cheick Modibo Diarra","Cheikh Anta Diop","Nelson Mandela","George Weah"],
-                    answer:"2e"
-                },
-                {
-                    id: 16,
-                    question:"Qu’est-ce que la CEDEAO ?",
-                    options:[
-                        "La Commission de l’économie et du développement écologique d’Afrique occidentale",
-                        "La Communauté économique des États de l'Afrique de l'Ouest",
-                        "La Commission aux énergies durables et à l’environnement de l’Assemblée ordinaire du Parlement français",
-                        "La Charte pour une Education démocratique et équitable dans les Affiliés officiels signée parles établissements scolaires privés"
-                    ],
-                    answer:""
-                },
             ]
-        }
+        } 
     }
 ]
 
