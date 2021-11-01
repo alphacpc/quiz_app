@@ -36,7 +36,7 @@ const QuizOver = React.forwardRef((props, ref) => {
                 ) : (
                     <React.Fragment>
                         <p>Bravo, vous etes un expert</p>
-                        <button onClick={() => nextLevel(quizLevel) }>Niveau suivant</button>
+                        <button onClick={() => nextLevel(0) }>Rejouer</button>
                     </React.Fragment>
                 )
             }

@@ -19,7 +19,7 @@ const AppBar = ({userData}) => {
 
     return (
         <div className="mainAppBar">
-            <img src={Logo5}/>
+            <img src={Logo5} alt="Mon super logo"/>
             <div>
                 <span className="currentUser">{userData.fullname}</span>
                 <button onClick={ handleClick} id="btnLogout">Deconnexion</button>

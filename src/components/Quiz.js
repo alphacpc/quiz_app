@@ -1,5 +1,5 @@
-import React, { useState, useContext, useEffect } from "react";
-import ProgressBar from "./ProgressBar";
+import React, { useState,  useEffect } from "react";
+
 import QuizOver from './QuizOver';
 import QuestionStepper from "./QuestionStepper";
 
@@ -200,7 +200,7 @@ const Quiz = ({userData}) => {
     (
     <React.Fragment>
       
-      {/* <ProgressBar /> */}
+
 
       <QuestionStepper questions={ sortedQuestion } idQuestion={idQuestion}/>
 
