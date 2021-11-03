@@ -707,10 +707,15 @@ html{
 .popupBody > div p{
     width: 70%;
     text-align: justify;
+    padding-right: 40px;
 }
 
-.popupBody > div img{
+.popupBody > div a{
     width: 30%;
+}
+
+.popupBody > div a  img{
+    width: 100%;
 }
 
 .popupFooter{
