@@ -6,7 +6,7 @@ const Quiz = [
                
                 {
                     id: 1,
-                    question:"Quelle est la capitale du senegal ?",
+                    question:"Quelle est la capitale du Sénégal ?",
                     options:["Accra","Abuja","Dakar","Livre-ville"],
                     answer:"Dakar",
                     complement: {
@@ -53,7 +53,7 @@ const Quiz = [
                 {
                     id: 4,
                     question:"L’Afrique est le berceau de l’humanité !",
-                    options:["Vrai","Faux","Je passe"],
+                    options:["Vrai","Faux","Je passe", "C'est plutot l'Europe"],
                     answer:"Vrai",
                     complement: {
                         img: "",

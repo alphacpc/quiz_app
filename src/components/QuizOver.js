@@ -1,7 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import Popup from "./ModalPopup";
-import { FaUserGraduate } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { FaUserGraduate, FaTrophy} from "react-icons/fa";
 
 
 const QuizOver = React.forwardRef((props, ref) => {
@@ -24,7 +23,6 @@ const QuizOver = React.forwardRef((props, ref) => {
         setQpopup(el.question)
         setQiPopup(el.complement.img)
         setOpenPopup(true);
-        console.log(qIpopup)
     }
 
     const hidePopup = () => {
@@ -44,10 +42,9 @@ const QuizOver = React.forwardRef((props, ref) => {
         <React.Fragment>
         <div className="divMsgNextLevel">
             { 
-                (quizLevel < levelNames.length) ? 
-                (   
+                (quizLevel < levelNames.length) ? (   
                     <React.Fragment>
-                        <p>Bravo, passez au niveau suivant</p>
+                        <p><FaTrophy size={24}/> Bravo, passez au niveau suivant</p>
                         <button onClick={() => nextLevel(quizLevel) }>Niveau suivant</button>
                     </React.Fragment>         
                 ) : (
@@ -62,7 +59,6 @@ const QuizOver = React.forwardRef((props, ref) => {
 
     ) : (<div className="divMsgNextLevel">
             <p className="pLoser">Desole, vous avez echoue</p>
-            {/* <button onClick={() => nextLevel(quizLevel) }>Niveau suivant</button> */}
         </div>
     );
 
