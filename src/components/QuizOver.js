@@ -1,27 +1,44 @@
 import React, { useEffect, useState} from 'react';
 import Popup from "./ModalPopup";
 import { FaUserGraduate } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const QuizOver = React.forwardRef((props, ref) => {
 
-    const { levelName, score, numQuestions, nextLevel, currentLevel ,quizLevel, percent, levelNames } = props;
+    const { levelName, score, numQuestions, nextLevel, currentLevel ,quizLevel, levelNames } = props;
        
     const [questionList, setQuestionList] = useState([]);
     const [openPopup, setOpenPopup ] = useState(false);
+    const [qPopup, setQpopup] = useState("");
+    const [qDpopup, setQdPopup] = useState("");
+    const [qIpopup, setQiPopup] = useState("");
 
     useEffect(()=>{
         setQuestionList(ref);
     },[ref])
 
-
+    
     const showPopup = el => {
+        setQdPopup(el.complement.infos);
+        setQpopup(el.question)
+        setQiPopup(el.complement.img)
         setOpenPopup(true);
+        console.log(qIpopup)
     }
 
     const hidePopup = () => {
         setOpenPopup(false);
     }
+
+    const checkRenderRow = (qIpopup !== "") ? (
+        <div>
+            <p>{qDpopup}</p>
+            <Link target="_blank"><img src={qIpopup.default} alt="image"/></Link>
+        </div>
+    ):(
+        <p>{qDpopup}</p>
+    );
 
     const decision = score >= numQuestions / 2 ? (
         <React.Fragment>
@@ -94,14 +111,10 @@ const QuizOver = React.forwardRef((props, ref) => {
             
             <Popup show={openPopup}>
                 <div className="popupHeader">
-                    <h2>Titre</h2>
+                    <h2>{qPopup}</h2>
                 </div>
                 <div className="popupBody">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate maiores at accusantium id voluptatibus assumenda excepturi adipisci quod aliquid! Ut modi eveniet at dolor adipisci laborum architecto similique quam.
-                    Pariatur dolor amet voluptas eius quae at repellendus itaque, beatae unde modi? Dolorem expedita molestias itaque, dolor recusandae maxime corrupti. Nihil, consectetur pariatur at autem sed aliquid sapiente eaque incidunt?
-                    Delectus ab nulla dicta officia voluptatem dolorem quisquam debitis placeat aperiam nesciunt consectetur nisi tempore non deserunt tempora natus, ipsum fuga laboriosam in amet quod minus? Placeat alias reprehenderit dignissimos.
-                    Sapiente nam dolores iure voluptates, voluptatem atque molestias vero temporibus, reprehenderit, doloribus incidunt laudantium consequatur mollitia fugiat nesciunt exercitationem officia velit saepe ea necessitatibus adipisci? Perferendis rerum ex veritatis temporibus!
-                    Incidunt, perferendis cumque! Ab nam, neque delectus reiciendis distinctio debitis deserunt praesentium cum laborum sed magnam iure modi cupiditate aut aliquam rerum dolores quas. Tenetur, ea nostrum! Maiores, laudantium error.</p>
+                    {checkRenderRow}
                 </div>
                 <div className="popupFooter">
                     <button className="btn ClosePopup" onClick={() => hidePopup()}>Fermer</button>

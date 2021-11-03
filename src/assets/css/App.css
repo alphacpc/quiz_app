@@ -699,7 +699,19 @@ html{
     font-size: 18px;
     line-height: 30px;
 }
+.popupBody > div{
+    display: flex;
+    align-items: center;
+}
 
+.popupBody > div p{
+    width: 70%;
+    text-align: justify;
+}
+
+.popupBody > div img{
+    width: 30%;
+}
 
 .popupFooter{
     background-color: #e2dede;
