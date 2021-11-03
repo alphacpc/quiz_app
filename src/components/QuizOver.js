@@ -34,7 +34,7 @@ const QuizOver = React.forwardRef((props, ref) => {
     const checkRenderRow = (qIpopup !== "") ? (
         <div>
             <p>{qDpopup}</p>
-            <Link target="_blank"><img src={qIpopup.default} alt="image"/></Link>
+            <a href={qIpopup.default} target="_blank"><img src={qIpopup.default} alt="image"/></a>
         </div>
     ):(
         <p>{qDpopup}</p>
