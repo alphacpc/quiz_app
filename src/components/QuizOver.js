@@ -38,6 +38,10 @@ const QuizOver = React.forwardRef((props, ref) => {
         <p>{qDpopup}</p>
     );
 
+
+    console.log("Etape current:", quizLevel);
+    console.log("Total level:", levelNames.length);
+
     const decision = score >= numQuestions / 2 ? (
         <React.Fragment>
         <div className="divMsgNextLevel">
