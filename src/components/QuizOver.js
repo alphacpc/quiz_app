@@ -46,7 +46,7 @@ const QuizOver = React.forwardRef((props, ref) => {
         <React.Fragment>
         <div className="divMsgNextLevel">
             { 
-                (quizLevel < levelNames.length) ? (   
+                (quizLevel < levelNames.length - 1) ? (   
                     <React.Fragment>
                         <p><FaTrophy size={24}/> Bravo, passez au niveau suivant</p>
                         <button onClick={() => nextLevel(quizLevel) }>Niveau suivant</button>

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import FirebaseContext from './../firebases/contextFirebase';
-
 import Logo5 from "./../assets/images/Logo5.png";
 
 const AppBar = ({userData}) => {
@@ -8,7 +7,6 @@ const AppBar = ({userData}) => {
     const firebase = useContext(FirebaseContext);
 
     const handleClick = async () => {
-
         try{
             return await firebase.logoutUser();
         }
@@ -16,6 +14,7 @@ const AppBar = ({userData}) => {
             console.log(err);
         }
     }
+
 
     return (
         <div className="mainAppBar">

@@ -739,3 +739,42 @@ html{
 .popupFooter > button:hover{
     background-color: rgb(231, 16, 34);
 }
+
+
+
+
+
+/* ******************* */
+/* ****TABLETTE ***** */
+/* ******************* */
+@media only screen and (max-width:768px) {
+    .Auth{
+        background-size: 0%;
+    }
+
+    .mainChild{
+        width: 100%;
+        position: relative !important;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0 10%;
+    }
+
+    .welcomeBody{
+        padding: 0 2%;
+    }
+}
+
+@media only screen and (max-width:375px) {  
+    .mainChild{
+        padding: 0 5%;
+    }
+
+    .mainChild form{
+        padding: 0 15px;
+    }
+    .form-group-head{
+        top: 1vh;
+    }
+}
